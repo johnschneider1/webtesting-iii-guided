@@ -1,8 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+export const asyncFunc = () => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve("Success!");
+    }, 1000);
+  });
+};
 
 class App extends Component {
+  // static asyncFunc = () => {
+  //   return new Promise(resolve => {
+  //     setTimeout(() => {
+  //       resolve("Success!");
+  //     }, 1000);
+  //   });
+  // };
   render() {
     return (
       <div className="App">
